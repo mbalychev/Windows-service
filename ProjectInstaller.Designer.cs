@@ -33,16 +33,16 @@
             // 
             // serviceProcessInstaller
             // 
-            this.serviceProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
-            this.serviceProcessInstaller.Password = null;
-            this.serviceProcessInstaller.Username = null;
+            this.serviceProcessInstaller.Password = "шкгД2929";
+            this.serviceProcessInstaller.Username = ".\\михаил";
             // 
             // serviceInstaller
             // 
+            this.serviceInstaller.DelayedAutoStart = true;
             this.serviceInstaller.Description = "Пример работы службы";
             this.serviceInstaller.DisplayName = "Example service watcher";
             this.serviceInstaller.ServiceName = "BmmService";
-            this.serviceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            this.serviceInstaller.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.serviceInstaller_AfterInstall);
             // 
             // ProjectInstaller
             // 

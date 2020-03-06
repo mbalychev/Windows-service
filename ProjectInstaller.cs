@@ -15,5 +15,10 @@ namespace BmmService
         {
             InitializeComponent();
         }
+
+        private void serviceInstaller_AfterInstall(object sender, InstallEventArgs e)
+        {
+
+        }
     }
 }
